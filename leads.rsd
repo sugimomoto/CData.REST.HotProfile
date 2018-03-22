@@ -1,0 +1,108 @@
+<rsb:script xmlns:rsb="http://www.rssbus.com/ns/rsbscript/2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <rsb:info title="JSONData" desc="Generated schema file." xmlns:other="http://www.rssbus.com/ns/rsbscript/2/other">
+    <!-- You can modify the name, type, and column size here.  The name must match the values in the rsb:script block below -->
+    <attr name="address"                xs:type="string"   readonly="false" other:xPath="address"                 />
+    <attr name="client_id"              xs:type="integer"  readonly="false" other:xPath="client_id"               />
+    <attr name="client_name"            xs:type="string"   readonly="false" other:xPath="client_name"             />
+    <attr name="competitor_flg"         xs:type="string"   readonly="false" other:xPath="competitor_flg"          />
+    <attr name="created_at"             xs:type="datetime" readonly="false" other:xPath="created_at"              />
+    <attr name="customer_id"            xs:type="unknown"  readonly="false" other:xPath="customer_id"             />
+    <attr name="email"                  xs:type="string"   readonly="false" other:xPath="email"                   />
+    <attr name="end_user_flg"           xs:type="string"   readonly="false" other:xPath="end_user_flg"            />
+    <attr name="error_address_flg"      xs:type="string"   readonly="false" other:xPath="error_address_flg"       />
+    <attr name="error_fax_flg"          xs:type="string"   readonly="false" other:xPath="error_fax_flg"           />
+    <attr name="error_mail_flg"         xs:type="string"   readonly="false" other:xPath="error_mail_flg"          />
+    <attr name="error_tel_flg"          xs:type="string"   readonly="false" other:xPath="error_tel_flg"           />
+    <attr name="extension"              xs:type="unknown"  readonly="false" other:xPath="extension"               />
+    <attr name="family_name"            xs:type="string"   readonly="false" other:xPath="family_name"             />
+    <attr name="family_name_kana"       xs:type="string"   readonly="false" other:xPath="family_name_kana"        />
+    <attr name="fax"                    xs:type="integer"  readonly="false" other:xPath="fax"                     />
+    <attr name="first_name"             xs:type="string"   readonly="false" other:xPath="first_name"              />
+    <attr name="first_name_kana"        xs:type="string"   readonly="false" other:xPath="first_name_kana"         />
+    <attr name="id"                     xs:type="integer"  readonly="false" other:xPath="id"                      />
+    <attr name="important_customer_flg" xs:type="string"   readonly="false" other:xPath="important_customer_flg"  />
+    <attr name="items_1_label"          xs:type="string"   readonly="false" other:xPath="items[1]/label"          />
+    <attr name="items_1_value"          xs:type="unknown"  readonly="false" other:xPath="items[1]/value"          />
+    <attr name="items_label"            xs:type="string"   readonly="false" other:xPath="items/label"             />
+    <attr name="items_value"            xs:type="unknown"  readonly="false" other:xPath="items/value"             />
+    <attr name="latitude"               xs:type="unknown"  readonly="false" other:xPath="latitude"                />
+    <attr name="lead_source"            xs:type="string"   readonly="false" other:xPath="lead_source"             />
+    <attr name="lead_source_kbn_id"     xs:type="integer"  readonly="false" other:xPath="lead_source_kbn_id"      />
+    <attr name="lead_source_kbn_name"   xs:type="string"   readonly="false" other:xPath="lead_source_kbn_name"    />
+    <attr name="lead_status"            xs:type="unknown"  readonly="false" other:xPath="lead_status"             />
+    <attr name="lead_status_name"       xs:type="unknown"  readonly="false" other:xPath="lead_status_name"        />
+    <attr name="longitude"              xs:type="unknown"  readonly="false" other:xPath="longitude"               />
+    <attr name="mobile_email"           xs:type="unknown"  readonly="false" other:xPath="mobile_email"            />
+    <attr name="mobile_tel"             xs:type="double"   readonly="false" other:xPath="mobile_tel"              />
+    <attr name="name"                   xs:type="string"   readonly="false" other:xPath="name"                    />
+    <attr name="name_kana"              xs:type="string"   readonly="false" other:xPath="name_kana"               />
+    <attr name="not_dm_flg"             xs:type="string"   readonly="false" other:xPath="not_dm_flg"              />
+    <attr name="not_fax_flg"            xs:type="string"   readonly="false" other:xPath="not_fax_flg"             />
+    <attr name="not_mail_flg"           xs:type="string"   readonly="false" other:xPath="not_mail_flg"            />
+    <attr name="not_tel_flg"            xs:type="string"   readonly="false" other:xPath="not_tel_flg"             />
+    <attr name="note"                   xs:type="unknown"  readonly="false" other:xPath="note"                    />
+    <attr name="organization_id"        xs:type="integer"  readonly="false" other:xPath="organization_id"         />
+    <attr name="organization_name"      xs:type="string"   readonly="false" other:xPath="organization_name"       />
+    <attr name="owner_user_code"        xs:type="string"   readonly="false" other:xPath="owner_user_code"         />
+    <attr name="owner_user_id"          xs:type="integer"  readonly="false" other:xPath="owner_user_id"           />
+    <attr name="owner_user_name"        xs:type="string"   readonly="false" other:xPath="owner_user_name"         />
+    <attr name="post"                   xs:type="string"   readonly="false" other:xPath="post"                    />
+    <attr name="pref"                   xs:type="string"   readonly="false" other:xPath="pref"                    />
+    <attr name="pref_id"                xs:type="integer"  readonly="false" other:xPath="pref_id"                 />
+    <attr name="store_flg"              xs:type="string"   readonly="false" other:xPath="store_flg"               />
+    <attr name="tags"                   xs:type="unknown"  readonly="false" other:xPath="tags"                    />
+    <attr name="tel"                    xs:type="integer"  readonly="false" other:xPath="tel"                     />
+    <attr name="trade_on"               xs:type="date"     readonly="false" other:xPath="trade_on"                />
+    <attr name="updated_at"             xs:type="datetime" readonly="false" other:xPath="updated_at"              />
+    <attr name="url"                    xs:type="unknown"  readonly="false" other:xPath="url"                     />
+    <attr name="zip"                    xs:type="string"   readonly="false" other:xPath="zip"                     />
+  </rsb:info>
+
+  <!-- Column XPaths are relative to a RepeatElement that splits the JSON into rows. -->
+  <rsb:set attr="RepeatElement" value="/leads" />
+
+  <!-- The GET method corresponds to SELECT. Within the script block, you can see the URI modified to append a query string parameter. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <rsb:script method="GET">
+      <rsb:set attr="hparam.uri"  value="https://hammock.hotprofile.biz/rest_api/v1/leads/get_entry_list" />
+      <rsb:set attr="hparam.ContentType"  value="application/x-www-form-urlencoded" />
+      <rsb:set attr="hparam.Method" value="POST"/>
+      <rsb:set attr="hparam.Data">api_key=[_connection.ApiKey]</rsb:set>
+      <rsb:set attr="hparam.encodepostdata" value="false" />
+      <rsb:set attr="hparam.header:name" value="Accept"/>
+      <rsb:set attr="hparam.header:value" value="application/json"/>
+      <rsb:set attr="hparam.RepeatElement" value="/leads"/>
+    <rsb:call op="jsonproviderGet" input="hparam">
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->
+  <rsb:script method="POST">
+    <rsb:set attr="method" value="POST"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Inserts are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->
+  <rsb:script method="MERGE">
+    <rsb:set attr="method" value="PUT"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Updates are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->
+  <rsb:script method="DELETE">
+    <rsb:set attr="method" value="DELETE"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Deletes are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+</rsb:script>

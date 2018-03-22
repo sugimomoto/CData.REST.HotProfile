@@ -1,0 +1,75 @@
+<rsb:script xmlns:rsb="http://www.rssbus.com/ns/rsbscript/2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <rsb:info title="deals" desc="Generated schema file." xmlns:other="http://www.rssbus.com/ns/rsbscript/2/other">
+    <!-- You can modify the name, type, and column size here.  The name must match the values in the rsb:script block below -->
+    <attr name="amount"             xs:type="string"   readonly="false" other:xPath="amount"              />
+    <attr name="campaign"           xs:type="unknown"  readonly="false" other:xPath="campaign"            />
+    <attr name="chance"             xs:type="string"   readonly="false" other:xPath="chance"              />
+    <attr name="client_id"          xs:type="integer"  readonly="false" other:xPath="client_id"           />
+    <attr name="client_name"        xs:type="string"   readonly="false" other:xPath="client_name"         />
+    <attr name="created_at"         xs:type="datetime" readonly="false" other:xPath="created_at"          />
+    <attr name="end_contract_at"    xs:type="unknown"  readonly="false" other:xPath="end_contract_at"     />
+    <attr name="gross_profit"       xs:type="string"   readonly="false" other:xPath="gross_profit"        />
+    <attr name="id"                 xs:type="integer"  readonly="false" other:xPath="id"                  />
+    <attr name="lead_ids"           xs:type="integer"  readonly="false" other:xPath="lead_ids"            />
+    <attr name="lead_names"         xs:type="string"   readonly="false" other:xPath="lead_names"          />
+    <attr name="mail_user_codes"    xs:type="unknown"  readonly="false" other:xPath="mail_user_codes"     />
+    <attr name="mail_user_names"    xs:type="unknown"  readonly="false" other:xPath="mail_user_names"     />
+    <attr name="next_action_values" xs:type="string"   readonly="false" other:xPath="next_action_values"  />
+    <attr name="note1"              xs:type="unknown"  readonly="false" other:xPath="note1"               />
+    <attr name="note2"              xs:type="unknown"  readonly="false" other:xPath="note2"               />
+    <attr name="orders_date"        xs:type="date"     readonly="false" other:xPath="orders_date"         />
+    <attr name="product"            xs:type="string"   readonly="false" other:xPath="product"             />
+    <attr name="start_contract_at"  xs:type="unknown"  readonly="false" other:xPath="start_contract_at"   />
+    <attr name="status"             xs:type="string"   readonly="false" other:xPath="status"              />
+    <attr name="title"              xs:type="string"   readonly="false" other:xPath="title"               />
+    <attr name="updated_at"         xs:type="datetime" readonly="false" other:xPath="updated_at"          />
+    <attr name="user_department"    xs:type="unknown"  readonly="false" other:xPath="user_department"     />
+    <attr name="user_id"            xs:type="string"   readonly="false" other:xPath="user_id"             />
+    <attr name="user_name"          xs:type="string"   readonly="false" other:xPath="user_name"           />
+  </rsb:info>
+
+  <!-- The GET method corresponds to SELECT. Within the script block, you can see the URI modified to append a query string parameter. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <rsb:script method="GET">
+      <rsb:set attr="hparam.uri"  value="https://hammock.hotprofile.biz/rest_api/v1/deals/get_entry_list" />
+      <rsb:set attr="hparam.ContentType"  value="application/x-www-form-urlencoded" />
+      <rsb:set attr="hparam.Method" value="POST"/>
+      <rsb:set attr="hparam.Data">api_key=[_connection.ApiKey]</rsb:set>
+      <rsb:set attr="hparam.encodepostdata" value="false" />
+      <rsb:set attr="hparam.header:name" value="Accept"/>
+      <rsb:set attr="hparam.header:value" value="application/json"/>
+      <rsb:set attr="hparam.RepeatElement" value="/deals"/>
+    <rsb:call op="jsonproviderGet" input="hparam">
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for INSERTS please see the INSERT Execution page within the help for further information and examples. -->
+  <rsb:script method="POST">
+    <rsb:set attr="method" value="POST"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Inserts are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for UPDATES please see the UPDATE Execution page within the help for further information and examples. -->
+  <rsb:script method="MERGE">
+    <rsb:set attr="method" value="PUT"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Updates are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+  <!-- To add support for DELETES please see the DELETE Execution page within the help for further information and examples. -->
+  <rsb:script method="DELETE">
+    <rsb:set attr="method" value="DELETE"/>
+    <rsb:call op="jsonproviderGet">
+      <rsb:throw code="500" desc="Deletes are not currently supported."/>
+      <rsb:push/>
+    </rsb:call>
+  </rsb:script>
+
+</rsb:script>
